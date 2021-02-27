@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'boardapp.apps.BoardappConfig'
+	'boardapp.apps.BoardappConfig',
+	'rest_framework',
+	'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -106,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -118,4 +120,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/sta/'
+
+# 保存先指定（本番用）
+STATIC_ROOT = BASE_DIR/"staticfiles"
+
+# アプリ別で保存先を分ける場合、ここの配列で指定する（開発用）
+STATICFILES_DIRS = [str(BASE_DIR/ "static")]
+
+MEDIA_URL = "mediamedia/"
+
+# 保存先指定
+MEDIA_ROOT = BASE_DIR/"media"
+
+LOGIN_URL = "login"
