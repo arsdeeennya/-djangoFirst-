@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 	'boardapp.apps.BoardappConfig',
 	'api.apps.ApiConfig',
-	# 'rest_framework',
-	# 'rest_framework.authtoken',
+	'rest_framework',
+	'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
